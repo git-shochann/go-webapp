@@ -19,21 +19,21 @@ var err error
 const tableNameUser string = "users"
 
 func init() {
-	Db, err := sql.Open(config.Config.SQLDriver, config.Config.DbName)
+	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
 		fmt.Printf("type is %T\n", err) // DEBUG errは構造体
 		log.Fatalln(err)
 	}
 	// S -> 文字列を返す f-> フォーマットする
-	cmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTO INCREMENT,
+	createTableCmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		uuid STRING NOT NULL UNIQUE,
 		name STRING,
 		email STRING,
 		password STRING,
 		created_at DATETIME)`, tableNameUser)
 
-	Db.Exec(cmd)
+	Db.Exec(createTableCmd)
 }
 
 // uuidを作成する関数 名前付き戻り値

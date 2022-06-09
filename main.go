@@ -17,4 +17,13 @@ func main() {
 
 	// init関数を呼び出すためだけに書いたコード
 	fmt.Println(models.Db)
+
+	// 構造体を初期化する
+	u := &models.User{
+		Name:     "Sho",
+		Email:    "tarochann@gmail.com",
+		PassWord: "tarotest000",
+	}
+	fmt.Println(u)
+	u.CreateUser()
 }

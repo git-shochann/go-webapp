@@ -1,6 +1,9 @@
 package models
 
-import "time"
+import (
+	"log"
+	"time"
+)
 
 type User struct {
 	ID        int
@@ -13,14 +16,18 @@ type User struct {
 
 // 名前付き戻り値
 func (u *User) CreateUser() (err error) {
-	cmd := `insert into users (
+	createUserCmd := `insert into users (
 		uuid,
 		name,
 		email,
 		password,
-		created_at) values(?,?,?,?,?)
-	)`
+		created_at) values(?,?,?,?,?)`
 
 	// 同一パッケージ間で変数を共有するためpackage名.変数.メソッド()としない。
-	// result, err := Db.Exec(cmd)
+	// ここで実際にUserテーブルに登録する。
+	_, err = Db.Exec(createUserCmd, createUUID(), u.Name, u.Email, Encrypto(u.PassWord), time.Now())
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
 }
