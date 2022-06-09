@@ -1,14 +1,15 @@
 package models
 
 import (
+	"crypto/sha1"
 	"database/sql"
 	"fmt"
 	"go-webapp/config"
 	"log"
-	// _ "github.com/mattn/go-sqlite3"
-)
 
-// Userテーブルの作成
+	"github.com/google/uuid"
+	_ "github.com/mattn/go-sqlite3"
+)
 
 // Dbという変数でsqlパッケージの*DB型(構造体)として宣言する -> メソッドを使用するため
 var Db *sql.DB
@@ -24,7 +25,7 @@ func init() {
 		log.Fatalln(err)
 	}
 	// S -> 文字列を返す f-> フォーマットする
-	cmdUser := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+	cmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
 		id INTEGER PRIMARY KEY AUTO INCREMENT,
 		uuid STRING NOT NULL UNIQUE,
 		name STRING,
@@ -32,5 +33,18 @@ func init() {
 		password STRING,
 		created_at DATETIME)`, tableNameUser)
 
-	Db.Exec(cmdUser)
+	Db.Exec(cmd)
+}
+
+// uuidを作成する関数 名前付き戻り値
+func createUUID() (uuidobj uuid.UUID) {
+	uuidobj, _ = uuid.NewUUID()
+	return uuidobj
+}
+
+// Passwordを作成する
+func Encrypto(plaintext string) (cryptext string) {
+	// sha1を用いて、ハッシュ化する
+	cryptext = fmt.Sprintf("%x", sha1.Sum([]byte(plaintext)))
+	return cryptext
 }
