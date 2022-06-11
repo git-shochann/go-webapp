@@ -61,4 +61,16 @@ func (u User) UpdateUser() (err error) {
 		log.Fatalln(err) // そのときのエラー構造体を出力する?
 	}
 	return err
+
+}
+
+// Userの削除
+func (u *User) DeleteUser() (err error) {
+	deleteUserCommand := `delete from users where id = ?`
+	_, err = Db.Exec(deleteUserCommand, u.ID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
+
 }

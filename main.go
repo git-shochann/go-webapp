@@ -41,4 +41,12 @@ func main() {
 	// 再度表示
 	u, _ = models.GetUser(1)
 	fmt.Println(u)
+
+	// Userの削除
+	u.DeleteUser()
+
+	// 再度表示
+	u, _ = models.GetUser(1)
+	fmt.Println(u)
+
 }
