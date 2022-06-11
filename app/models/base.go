@@ -22,13 +22,16 @@ const (
 )
 
 func init() {
+
 	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
 		fmt.Printf("type is %T\n", err) // DEBUG errは構造体
 		log.Fatalln(err)
 	}
+
+	// usersテーブルの作成
 	// S -> 文字列を返す f-> フォーマットする
-	createTableCmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+	createUsersTableCmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		uuid STRING NOT NULL UNIQUE,
 		name STRING,
@@ -36,7 +39,22 @@ func init() {
 		password STRING,
 		created_at DATETIME)`, tableNameUser)
 
-	Db.Exec(createTableCmd)
+	Db.Exec(createUsersTableCmd)
+
+	// TODO: ここにエラーハンドリング追加した方がいいかもしれない //
+
+	// todosテーブルの作成
+	createTodosTableCmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		content TEXT,
+		user_id INTEGER,
+		created_at DATETIME)`, tableNameTodo)
+
+	_, err := Db.Exec(createTodosTableCmd)
+	if err != nil {
+		log.Fatalln(err) // log.Fatalln() -> logging.goの標準出力設定を変更しているのでそこに書き出して、その後プログラムをストップする
+	}
+
 }
 
 // uuidを作成する関数 名前付き戻り値

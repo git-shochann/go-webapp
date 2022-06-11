@@ -15,3 +15,7 @@
 2022/06/12 00:44:07 main.go:16: aaa
 2022/06/12 00:44:20 main.go:16: aaa
 2022/06/12 01:10:00 main.go:16: aaa
+2022/06/12 01:28:52 main.go:16: aaa
+2022/06/12 01:31:40 main.go:16: aaa
+2022/06/12 01:34:16 base.go:53: AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY
+2022/06/12 01:59:04 main.go:16: aaa
