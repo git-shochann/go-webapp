@@ -47,3 +47,18 @@ func GetUser(id int) (user User, err error) {
 	err = data.Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
 	return user, err
 }
+
+// Userの更新
+func (u User) UpdateUser() (err error) {
+	// idを元にnameとemailを変更
+	updateUserCommand := `update users set name = ?, email = ? where id = ?`
+	_, err = Db.Exec(updateUserCommand, u.Name, u.Email, u.ID)
+	// DEBUG: わざとerrを出力すると...?
+	fmt.Println("---")
+	fmt.Printf("type is %T, value is %v\n", err, err)
+	fmt.Println("---")
+	if err != nil {
+		log.Fatalln(err) // そのときのエラー構造体を出力する?
+	}
+	return err
+}

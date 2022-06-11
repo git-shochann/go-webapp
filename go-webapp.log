@@ -4,3 +4,13 @@
 2022/06/11 23:15:19 main.go:16: aaa
 2022/06/11 23:18:09 main.go:16: aaa
 2022/06/11 23:21:04 main.go:16: aaa
+2022/06/12 00:15:42 main.go:16: aaa
+2022/06/12 00:15:42 users.go:59: near "where": syntax error
+2022/06/12 00:22:15 main.go:16: aaa
+2022/06/12 00:22:59 main.go:16: aaa
+2022/06/12 00:29:19 main.go:16: aaa
+2022/06/12 00:29:19 users.go:61: near "st": syntax error
+2022/06/12 00:30:45 main.go:16: aaa
+2022/06/12 00:30:45 users.go:63: near "st": syntax error
+2022/06/12 00:44:07 main.go:16: aaa
+2022/06/12 00:44:20 main.go:16: aaa
