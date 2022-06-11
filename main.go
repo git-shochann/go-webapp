@@ -26,4 +26,8 @@ func main() {
 	}
 	fmt.Println(u)
 	u.CreateUser()
+
+	// Userを取得する
+	returnValue, err := models.GetUser(1)
+	fmt.Println(returnValue, err)
 }
