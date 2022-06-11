@@ -16,7 +16,10 @@ var Db *sql.DB
 
 var err error
 
-const tableNameUser string = "users"
+const (
+	tableNameUser = "users"
+	tableNameTodo = "todos"
+)
 
 func init() {
 	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)

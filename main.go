@@ -45,7 +45,7 @@ func main() {
 	// Userの削除
 	u.DeleteUser()
 
-	// 再度表示
+	// 再度表示 -> 初期値のUser構造体が返ってくる
 	u, _ = models.GetUser(1)
 	fmt.Println(u)
 
