@@ -4,16 +4,22 @@ import (
 	"fmt"
 	"go-webapp/app/models"
 	"go-webapp/config"
-	"log"
 )
 
 func main() {
+
+	fmt.Println("##########################")
+
+	fmt.Println("Configを確認します")
+
 	fmt.Println(config.Config.Port)
 	fmt.Println(config.Config.SQLDriver)
 	fmt.Println(config.Config.DbName)
 	fmt.Println(config.Config.LogFile)
 
-	log.Println("aaa")
+	fmt.Println("##########################")
+
+	fmt.Println("Userを確認します")
 
 	// init関数を呼び出すためだけに書いたコード
 	fmt.Println(models.Db)
@@ -46,7 +52,17 @@ func main() {
 	u.DeleteUser()
 
 	// 再度表示 -> 初期値のUser構造体が返ってくる
-	u, _ = models.GetUser(1)
+	u, _ = models.GetUser(2)
 	fmt.Println(u)
+
+	fmt.Println("##########################")
+
+	fmt.Println("Todoを確認します")
+
+	// Todoの作成
+	fmt.Println(u)
+	u.CreateTodo("旅行の計画を立てる")
+
+	fmt.Println("##########################")
 
 }
