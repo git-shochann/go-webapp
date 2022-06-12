@@ -25,3 +25,12 @@
 2022/06/12 03:22:45 todos.go:23: near "value": syntax error
 2022/06/12 03:22:55 todos.go:23: near "value": syntax error
 2022/06/12 03:24:02 todos.go:23: near ")": syntax error
+2022/06/12 18:36:01 todos.go:36: sql: database is closed
+2022/06/12 18:36:18 todos.go:36: <nil>
+2022/06/12 18:38:08 todos.go:36: <nil>
+2022/06/12 18:45:20 todos.go:34: type is &{%!t(string=sql: no rows in result set)}
+value is sql: no rows in result set
+2022/06/12 18:45:39 todos.go:34: type is &{%!t(string=sql: no rows in result set)}, value is sql: no rows in result set
+2022/06/12 19:25:00 todos.go:34: type is *errors.errorString, value is sql: no rows in result set
+2022/06/12 19:34:37 todos.go:36: <nil>
+2022/06/12 19:36:12 todos.go:35: type is *errors.errorString, value is sql: no rows in result set
