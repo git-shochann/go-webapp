@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"go-webapp/app/models"
+)
+
 func main() {
 
 	// fmt.Println("##########################")
@@ -62,5 +67,13 @@ func main() {
 	// Todoの取得
 	// todo, _ := models.GetTodo(2)
 	// fmt.Println(todo)
+
+	// 複数Todoの取得
+	todo, _ := models.GetMultipleTodo()
+
+	// sliceを1つずつ出力する
+	for i, v := range todo {
+		fmt.Println(i, v)
+	}
 
 }
