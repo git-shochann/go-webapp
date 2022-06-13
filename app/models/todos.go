@@ -41,11 +41,11 @@ func GetTodo(id int) (todo Todo, err error) {
 	return todo, err
 }
 
-// 複数のTodoを取得する
-// '複数'だからスライスで返す
-func GetMultipleTodo() (todos []Todo, err error) {
-	GetMultipleTodoCmd := `select id, content, user_id, created_at from todos`
-	rows, err := Db.Query(GetMultipleTodoCmd)
+// 全部のTodoを取得する
+// '全部'だからスライスで返す
+func GetAllTodo() (todos []Todo, err error) {
+	GetAllTodoCmd := `select id, content, user_id, created_at from todos`
+	rows, err := Db.Query(GetAllTodoCmd)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -60,6 +60,26 @@ func GetMultipleTodo() (todos []Todo, err error) {
 
 		// スライスに要素を追加する
 		// []Todoなので[todo{}, todo{}, todo{}...]
+		todos = append(todos, todo)
+	}
+	rows.Close()
+
+	return todos, err
+}
+
+// 特定ユーザーのTodoを全部取得する
+func (u *User) GetMultipleTodo() (todos []Todo, err error) {
+	GetMultipleTodoCmd := `select id, content, user_id, created_at from todos where id = ?`
+	rows, err := Db.Query(GetMultipleTodoCmd, u.ID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	for rows.Next() {
+		todo := Todo{}
+		err = rows.Scan(&todo.ID, &todo.Content, &todo.UserID, &todo.CreatedAt)
+		if err != nil {
+			log.Fatalln(err)
+		}
 		todos = append(todos, todo)
 	}
 	rows.Close()

@@ -68,12 +68,18 @@ func main() {
 	// todo, _ := models.GetTodo(2)
 	// fmt.Println(todo)
 
-	// 複数Todoの取得
-	todo, _ := models.GetMultipleTodo()
+	// 全部のTodoの取得
+	todo, _ := models.GetAllTodo()
 
 	// sliceを1つずつ出力する
 	for i, v := range todo {
 		fmt.Println(i, v)
 	}
 
+	// 特定ユーザーのTodoを全部取得
+	u, _ := models.GetUser(2)
+	todos, _ := u.GetMultipleTodo()
+	for _, v := range todos {
+		fmt.Println(v)
+	}
 }
