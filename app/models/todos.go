@@ -69,7 +69,7 @@ func GetAllTodo() (todos []Todo, err error) {
 
 // 特定ユーザーのTodoを全部取得する
 func (u *User) GetMultipleTodo() (todos []Todo, err error) {
-	GetMultipleTodoCmd := `select id, content, user_id, created_at from todos where id = ?`
+	GetMultipleTodoCmd := `select id, content, user_id, created_at from todos where user_id = ?`
 	rows, err := Db.Query(GetMultipleTodoCmd, u.ID)
 	if err != nil {
 		log.Fatalln(err)
@@ -85,4 +85,16 @@ func (u *User) GetMultipleTodo() (todos []Todo, err error) {
 	rows.Close()
 
 	return todos, err
+}
+
+// Todoの更新
+func (t *Todo) UpdateTodo() (err error) {
+	// todoのidを指定して、content_idとuser_idを変更する
+	UpdateTodoCmd := `update todos set content = ?, user_id = ? where id = ?`
+	_, err = Db.Exec(UpdateTodoCmd, t.Content, t.UserID, t.ID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
+
 }

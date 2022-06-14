@@ -51,7 +51,7 @@ func main() {
 	// u.DeleteUser()
 
 	// // 再度表示 -> 初期値のUser構造体が返ってくる
-	// u, _ = models.GetUser(2)
+	// u, _ := models.GetUser(2)
 	// fmt.Println(u)
 
 	// fmt.Println("##########################")
@@ -60,7 +60,7 @@ func main() {
 
 	// // Todoの作成
 	// fmt.Println(u)
-	// u.CreateTodo("旅行の計画を立てる")
+	// u.CreateTodo("ラーメンを食べる")
 
 	// fmt.Println("##########################")
 
@@ -69,17 +69,27 @@ func main() {
 	// fmt.Println(todo)
 
 	// 全部のTodoの取得
-	todo, _ := models.GetAllTodo()
+	// todo, _ := models.GetAllTodo()
 
-	// sliceを1つずつ出力する
-	for i, v := range todo {
-		fmt.Println(i, v)
-	}
+	// // sliceを1つずつ出力する
+	// for i, v := range todo {
+	// 	fmt.Println(i, v)
+	// }
 
 	// 特定ユーザーのTodoを全部取得
-	u, _ := models.GetUser(2)
-	todos, _ := u.GetMultipleTodo()
-	for _, v := range todos {
-		fmt.Println(v)
-	}
+	// u, _ := models.GetUser(2)
+	// // fmt.Println(u)
+	// todos, _ := u.GetMultipleTodo()
+	// // fmt.Println(todos)
+	// for _, v := range todos {
+	// 	fmt.Println(v)
+	// }
+
+	// Todoの更新
+	todo, _ := models.GetTodo(5)
+	fmt.Println(todo)
+	todo.Content = "家系食べる"
+	todo.UpdateTodo()
+	fmt.Println(todo)
+
 }

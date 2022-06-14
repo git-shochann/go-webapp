@@ -1,6 +1,7 @@
 package models
 
 import (
+	"database/sql"
 	"fmt"
 	"log"
 	"time"
@@ -40,11 +41,18 @@ func GetUser(id int) (user User, err error) {
 	getUserCommand := `select id, uuid, name, email, password, created_at from users where id = ?`
 	// idを渡して１行検索するクエリを投げる
 	data := Db.QueryRow(getUserCommand, id)
-	fmt.Println("---")
-	fmt.Println(data)
-	fmt.Println("---")
+	// fmt.Println("---")
+	// fmt.Println(data)
+	// fmt.Println("---")
 	//　作成したuserに埋め込む
 	err = data.Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			log.Fatalf("type is %T, value is %v\n", err, err) // ここの型とメッセージを調べてみた
+		} else {
+			log.Fatalln(err)
+		}
+	}
 	return user, err
 }
 
