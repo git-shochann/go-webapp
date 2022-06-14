@@ -36,3 +36,4 @@ value is sql: no rows in result set
 2022/06/12 19:36:12 todos.go:35: type is *errors.errorString, value is sql: no rows in result set
 2022/06/14 00:18:45 users.go:51: type is *errors.errorString, value is sql: no rows in result set
 2022/06/14 14:02:46 todos.go:96: near "where": syntax error
+2022/06/14 14:12:30 todos.go:35: type is *errors.errorString, value is sql: no rows in result set

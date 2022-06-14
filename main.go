@@ -86,10 +86,16 @@ func main() {
 	// }
 
 	// Todoの更新
-	todo, _ := models.GetTodo(5)
-	fmt.Println(todo)
-	todo.Content = "家系食べる"
-	todo.UpdateTodo()
-	fmt.Println(todo)
+	// todo, _ := models.GetTodo(5)
+	// fmt.Println(todo)
+	// todo.Content = "家系食べる"
+	// todo.UpdateTodo()
+	// fmt.Println(todo)
+
+	// Todoの削除
+	t, _ := models.GetTodo(5)
+	fmt.Println(t)
+	t.DeleteTodo()
+	fmt.Println(t)
 
 }
