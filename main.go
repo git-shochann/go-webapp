@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"go-webapp/app/models"
+	"go-webapp/app/controllers"
 )
 
 func main() {
@@ -93,9 +92,11 @@ func main() {
 	// fmt.Println(todo)
 
 	// Todoの削除
-	t, _ := models.GetTodo(5)
-	fmt.Println(t)
-	t.DeleteTodo()
-	fmt.Println(t)
+	// t, _ := models.GetTodo(5)
+	// fmt.Println(t)
+	// t.DeleteTodo()
+	// fmt.Println(t)
+
+	controllers.StartMainServer()
 
 }

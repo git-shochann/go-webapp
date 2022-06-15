@@ -12,6 +12,7 @@ type ConfigList struct {
 	SQLDriver string
 	DbName    string
 	LogFile   string
+	Static    string
 }
 
 // 外部でも呼び出せるようにグローバルに宣言する
@@ -33,6 +34,7 @@ func LoadConfig() {
 		SQLDriver: cfg.Section("db").Key("driver").String(),
 		DbName:    cfg.Section("db").Key("name").String(),
 		LogFile:   cfg.Section("web").Key("logfile").String(),
+		Static:    cfg.Section("web").Key("static").String(),
 	}
 
 }
