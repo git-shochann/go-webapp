@@ -16,7 +16,6 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 	// 実際の作成されたスライスの中身を確認する
 	fmt.Println(files)
 
-	//
 	template := template.Must(template.ParseFiles(files...))
 	template.ExecuteTemplate(w, "layout", data)
 
