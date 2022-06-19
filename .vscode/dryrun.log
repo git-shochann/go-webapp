@@ -1,5 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/sho/Coding/go/src/go-webapp'
+go run main.go
 make: Leaving directory `/Users/sho/Coding/go/src/go-webapp'
  
-make: *** No targets.  Stop.
-
