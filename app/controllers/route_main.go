@@ -4,7 +4,9 @@ import (
 	"net/http"
 )
 
-// ハンドラーを作る
+// Topページに行った際のハンドラーを作る
 func top(w http.ResponseWriter, r *http.Request) {
-	generateHTML(w, "layout", "top")
+
+	// Helloを渡す？
+	generateHTML(w, "Hello!", "layout", "public_navbar", "top")
 }

@@ -1,17 +1,21 @@
-<!-- 共通部分を切り出す -->
-
+<!-- 共通部分を切り出す == どのhtmlファイルでも使用する これがテンプレート -->
+{{define "layout"}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Web App</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/form.css" />
   </head>
   <body>
-    <!-- 以下のように書いて別ファイルから呼び出す -->
-    <div class="container text-center">{{template content .}}</div>
+    {{template "navbar"}}
+    <!-- 以下のように書いて別ファイルから呼び出す 以下の表記を変えて変更していく -> top.htmlにデータを渡す -->
+
+    <div class="container text-center">{{template "content" . }}</div>
   </body>
   <script src="/static/js/jquery-3.5.1.min.js"></script>
   <script src="/static/js/bootstrap.bundle.min.js"></script>
 </html>
+{{end}}
