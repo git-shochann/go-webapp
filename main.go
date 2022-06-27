@@ -1,7 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"go-webapp/app/controllers"
+	"go-webapp/app/models"
+	"log"
 )
 
 func main() {
@@ -33,7 +36,7 @@ func main() {
 	// // u.CreateUser()
 
 	// // Userを取得する
-	// u, err := models.GetUser(1)
+	// u, err := models.GetUserByID(1)
 	// fmt.Println(u, err)
 
 	// // Userを更新する
@@ -43,14 +46,14 @@ func main() {
 	// u.UpdateUser()
 
 	// // 再度表示
-	// u, _ = models.GetUser(1)
+	// u, _ = models.GetUserByID(1)
 	// fmt.Println(u)
 
 	// // Userの削除
 	// u.DeleteUser()
 
 	// // 再度表示 -> 初期値のUser構造体が返ってくる
-	// u, _ := models.GetUser(2)
+	// u, _ := models.GetUserByID(2)
 	// fmt.Println(u)
 
 	// fmt.Println("##########################")
@@ -76,7 +79,7 @@ func main() {
 	// }
 
 	// 特定ユーザーのTodoを全部取得
-	// u, _ := models.GetUser(2)
+	// u, _ := models.GetUserByID(2)
 	// // fmt.Println(u)
 	// todos, _ := u.GetMultipleTodo()
 	// // fmt.Println(todos)
@@ -98,5 +101,17 @@ func main() {
 	// fmt.Println(t)
 
 	controllers.StartMainServer()
+
+	user, _ := models.GetUserByEmail("test@gmail.com")
+	// fmt.Println(user)
+
+	sessions, err := user.CreateSession()
+	if err != nil {
+		log.Fatalln(err)
+	}
+	// fmt.Println(sessions)
+	// -> {1 7772e68e-f5f3-11ec-a2e4-e68f59fb0199 test@gmail.com 1 2022-06-27 17:30:57.152111 +0900 +0900}
+	valid, _ := sessions.CheckSession()
+	fmt.Println(valid)
 
 }

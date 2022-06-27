@@ -1313,3 +1313,11 @@ net/http.(*conn).serve(0x1400013b680, {0x104b60580, 0x140001272f0})
 	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
 created by net/http.(*Server).Serve
 	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/27 16:45:02 users.go:107: no such column: userid
+2022/06/27 16:45:30 users.go:107: no such column: user_id
+2022/06/27 16:46:12 users.go:107: sql: expected 5 destination arguments in Scan, not 6
+2022/06/27 16:46:38 users.go:107: sql: no rows in result set
+2022/06/27 17:30:57 main.go:108: sql: expected 4 destination arguments in Scan, not 5
+2022/06/27 17:31:08 main.go:108: sql: expected 4 destination arguments in Scan, not 5
+2022/06/27 17:33:27 main.go:108: sql: expected 4 destination arguments in Scan, not 5
+2022/06/27 20:21:16 users.go:107: sql: no rows in result set

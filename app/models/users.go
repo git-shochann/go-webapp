@@ -16,6 +16,14 @@ type User struct {
 	CreatedAt time.Time
 }
 
+type Session struct {
+	ID        int
+	UUID      string
+	Email     string
+	UserID    string
+	CreatedAt time.Time
+}
+
 // Userの作成
 // 名前付き戻り値
 func (u *User) CreateUser() (err error) {
@@ -36,7 +44,7 @@ func (u *User) CreateUser() (err error) {
 }
 
 // Userの取得
-func GetUser(id int) (user User, err error) {
+func GetUserByID(id int) (user User, err error) {
 	user = User{}
 	getUserCommand := `select id, uuid, name, email, password, created_at from users where id = ?`
 	// idを渡して１行検索するクエリを投げる
@@ -44,7 +52,7 @@ func GetUser(id int) (user User, err error) {
 	// fmt.Println("---")
 	// fmt.Println(data)
 	// fmt.Println("---")
-	//　作成したuserに埋め込む
+	// 作成したuserに埋め込む
 	err = data.Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
 	if err != nil {
 		if err == sql.ErrNoRows {
@@ -81,4 +89,72 @@ func (u *User) DeleteUser() (err error) {
 	}
 	return err
 
+}
+
+// Emailを元にDBから検索をかける
+func GetUserByEmail(email string) (user User, err error) {
+	getUserCommand := `select id, uuid, name, email, password, created_at
+	from users where email = ?`
+	user = User{} // マッピング用のstructを初期化
+	err = Db.QueryRow(getUserCommand, email).Scan(
+		&user.ID,
+		&user.UUID,
+		&user.Name,
+		&user.Email,
+		&user.PassWord,
+		&user.CreatedAt)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	// err != nil でエラーハンドリングをするので、errもしっかりここで戻り値として返す。
+	return user, err
+
+}
+
+// セッションを作成し、そのまま取得する関数
+func (u *User) CreateSession() (sessions Session, err error) {
+	createSessionCommand := `insert into sessions(
+		uuid,
+		email,
+		user_id,
+		created_at) values (?, ?, ?, ?)`
+	_, err = Db.Exec(createSessionCommand, createUUID(), u.Email, u.ID, time.Now())
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	// 上記で作成したセッションをそのまま取得する
+	getSessionCommand := `select id, uuid, email, user_id, created_at from sessions where user_id= ? and email = ?`
+	sessions = Session{}
+	err = Db.QueryRow(getSessionCommand, u.ID, u.Email).Scan(
+		&sessions.ID,
+		&sessions.UUID,
+		&sessions.Email,
+		&sessions.UserID,
+		&sessions.CreatedAt,
+	)
+
+	return sessions, err
+}
+
+// セッションがDBに存在するか判定するメソッド
+func (sess *Session) CheckSession() (valid bool, err error) {
+	CheckSessionCommand := `select id, uuid, email, user_id, created_at
+	from sessions where uuid = ?`
+
+	err = Db.QueryRow(CheckSessionCommand, sess.UUID).Scan(
+		&sess.ID,
+		&sess.UUID,
+		&sess.Email,
+		&sess.UserID,
+		&sess.CreatedAt,
+	)
+	if err != nil {
+		valid = false
+		return
+	}
+	if sess.ID != 0 {
+		valid = true
+	}
+	return valid, err
 }

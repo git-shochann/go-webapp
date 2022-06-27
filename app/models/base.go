@@ -17,8 +17,9 @@ var Db *sql.DB
 var err error
 
 const (
-	tableNameUser = "users"
-	tableNameTodo = "todos"
+	tableNameUser    = "users"
+	tableNameTodo    = "todos"
+	tableNameSession = "sessions"
 )
 
 func init() {
@@ -39,9 +40,10 @@ func init() {
 		password STRING,
 		created_at DATETIME)`, tableNameUser)
 
-	Db.Exec(createUsersTableCmd)
-
-	// TODO: ここにエラーハンドリング追加した方がいいかもしれない //
+	_, err := Db.Exec(createUsersTableCmd)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	// todosテーブルの作成
 	createTodosTableCmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
@@ -50,9 +52,22 @@ func init() {
 		user_id INTEGER,
 		created_at DATETIME)`, tableNameTodo)
 
-	_, err := Db.Exec(createTodosTableCmd)
+	_, err = Db.Exec(createTodosTableCmd)
 	if err != nil {
 		log.Fatalln(err) // log.Fatalln() -> logging.goの標準出力設定を変更しているのでそこに書き出して、その後プログラムをストップする
+	}
+
+	createSessionsTablecmd := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		uuid STRING NOT NULL UNIQUE,
+		email STRING,
+		user_id STRING,
+		created_at DATETIME
+	)`, tableNameSession)
+
+	_, err = Db.Exec(createSessionsTablecmd)
+	if err != nil {
+		log.Fatalln(err)
 	}
 
 }

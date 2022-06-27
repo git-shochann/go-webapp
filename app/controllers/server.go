@@ -8,17 +8,19 @@ import (
 )
 
 func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) {
-	var files []string               // ["A", "B", "C"]
-	for _, file := range filenames { // スライスを回す
-		files = append(files, fmt.Sprintf("app/views/templates/%s.html", file))
+	// スライスの作成
+	var files []string
+
+	// filenames == ["layout", "public_navbar", "signup"]
+	for _, v := range filenames {
+		files = append(files, fmt.Sprintf("app/views/templates/%s.html", v))
 	}
+	// files == ["app/views/templates/layout.html", "app/views/templates/public_navbar.html", "app/views/templates/signup.html"]
 
-	// 実際の作成されたスライスの中身を確認する
-	fmt.Println(files)
-
-	// パースしてキャッシュする？
+	// パースしてキャッシュする?
 	template := template.Must(template.ParseFiles(files...))
-	// 第二引数は実行するテンプレート、第3引数は
+
+	// 実際にHTMLを表示する処理を行う dataは渡したいデータ?
 	template.ExecuteTemplate(w, "layout", data)
 
 }
@@ -31,6 +33,8 @@ func StartMainServer() error {
 	// HandleFuncの引数にtop関数を渡す -> HandleFuncの第2引数と同じ型にする
 	http.HandleFunc("/", top)
 	http.HandleFunc("/signup", signup)
+	http.HandleFunc("/login", login)
+	http.HandleFunc("/authenticate", authenticate)
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 
 }
