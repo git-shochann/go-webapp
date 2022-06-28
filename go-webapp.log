@@ -1321,3 +1321,673 @@ created by net/http.(*Server).Serve
 2022/06/27 17:31:08 main.go:108: sql: expected 4 destination arguments in Scan, not 5
 2022/06/27 17:33:27 main.go:108: sql: expected 4 destination arguments in Scan, not 5
 2022/06/27 20:21:16 users.go:107: sql: no rows in result set
+2022/06/28 16:07:26 users.go:107: sql: no rows in result set
+2022/06/28 16:32:45 route_auth.go:95: http: named cookie not present
+2022/06/28 16:33:30 route_auth.go:95: http: named cookie not present
+2022/06/28 16:34:33 route_auth.go:95: http: named cookie not present
+2022/06/28 16:34:40 route_auth.go:95: http: named cookie not present
+2022/06/28 16:34:41 route_auth.go:95: http: named cookie not present
+2022/06/28 16:34:44 route_auth.go:95: http: named cookie not present
+2022/06/28 16:35:14 route_auth.go:95: http: named cookie not present
+2022/06/28 16:35:16 route_auth.go:95: http: named cookie not present
+2022/06/28 16:40:50 route_auth.go:95: http: named cookie not present
+2022/06/28 16:40:56 route_auth.go:95: http: named cookie not present
+2022/06/28 16:40:57 route_auth.go:95: http: named cookie not present
+2022/06/28 16:43:44 route_auth.go:95: http: named cookie not present
+2022/06/28 16:43:45 route_auth.go:95: http: named cookie not present
+2022/06/28 16:50:19 route_auth.go:95: http: named cookie not present
+2022/06/28 16:50:21 route_auth.go:95: http: named cookie not present
+2022/06/28 16:52:39 route_auth.go:95: http: named cookie not present
+2022/06/28 16:52:41 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:39 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:39 server.go:3159: http: panic serving [::1]:49611: runtime error: invalid memory address or nil pointer dereference
+goroutine 20 [running]:
+net/http.(*conn).serve.func1(0x140000bf360)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x1400022e000}, 0x1400018e100)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x1400022e000}, 0x1400018e100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x1400022e000}, 0x1400018e100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x1400022e000}, 0x1400018e100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000bf360, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:39 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:39 server.go:3159: http: panic serving [::1]:49612: runtime error: invalid memory address or nil pointer dereference
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0x140000bf400)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x1400010e0e0}, 0x140000d0100)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x1400010e0e0}, 0x140000d0100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x1400010e0e0}, 0x140000d0100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x1400010e0e0}, 0x140000d0100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000bf400, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:39 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:39 server.go:3159: http: panic serving [::1]:49613: runtime error: invalid memory address or nil pointer dereference
+goroutine 40 [running]:
+net/http.(*conn).serve.func1(0x140001d4140)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x140001a21c0}, 0x1400018e200)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x140001a21c0}, 0x1400018e200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x140001a21c0}, 0x1400018e200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x140001a21c0}, 0x1400018e200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001d4140, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:40 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:40 server.go:3159: http: panic serving [::1]:49615: runtime error: invalid memory address or nil pointer dereference
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0x14000218140)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x140001a22a0}, 0x1400018e300)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x140001a22a0}, 0x1400018e300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x140001a22a0}, 0x1400018e300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x140001a22a0}, 0x1400018e300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000218140, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:40 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:40 server.go:3159: http: panic serving [::1]:49616: runtime error: invalid memory address or nil pointer dereference
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0x140002181e0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x1400022e0e0}, 0x14000226100)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x1400022e0e0}, 0x14000226100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x1400022e0e0}, 0x14000226100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x1400022e0e0}, 0x14000226100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140002181e0, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:40 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:40 server.go:3159: http: panic serving [::1]:49617: runtime error: invalid memory address or nil pointer dereference
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0x140000bf4a0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x1400010e1c0}, 0x140000d0300)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x1400010e1c0}, 0x140000d0300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x1400010e1c0}, 0x140000d0300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x1400010e1c0}, 0x140000d0300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000bf4a0, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:41 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:41 server.go:3159: http: panic serving [::1]:49618: runtime error: invalid memory address or nil pointer dereference
+goroutine 43 [running]:
+net/http.(*conn).serve.func1(0x140001d41e0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x1400010e2a0}, 0x1400018e600)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x1400010e2a0}, 0x1400018e600)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x1400010e2a0}, 0x1400018e600)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x1400010e2a0}, 0x1400018e600)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001d41e0, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:41 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:41 server.go:3159: http: panic serving [::1]:49619: runtime error: invalid memory address or nil pointer dereference
+goroutine 44 [running]:
+net/http.(*conn).serve.func1(0x140001d4280)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x1400022e1c0}, 0x1400018e500)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x1400022e1c0}, 0x1400018e500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x1400022e1c0}, 0x1400018e500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x1400022e1c0}, 0x1400018e500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001d4280, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:54:41 route_auth.go:95: http: named cookie not present
+2022/06/28 16:54:41 server.go:3159: http: panic serving [::1]:49620: runtime error: invalid memory address or nil pointer dereference
+goroutine 45 [running]:
+net/http.(*conn).serve.func1(0x140001d4320)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x102e3cc60, 0x1030bd410})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+go-webapp/app/controllers.logout({0x102e945d0, 0x140001a2380}, 0x1400018e700)
+	/Users/sho/coding/go/src/go-webapp/app/controllers/route_auth.go:100 +0xe8
+net/http.HandlerFunc.ServeHTTP(0x102e896b8, {0x102e945d0, 0x140001a2380}, 0x1400018e700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x1030d0ec0, {0x102e945d0, 0x140001a2380}, 0x1400018e700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400010e000}, {0x102e945d0, 0x140001a2380}, 0x1400018e700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001d4320, {0x102e95f40, 0x1400009b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 16:57:24 route_auth.go:95: http: named cookie not present
+2022/06/28 16:57:27 route_auth.go:95: http: named cookie not present
+2022/06/28 16:57:29 route_auth.go:95: http: named cookie not present
+2022/06/28 16:57:31 route_auth.go:95: http: named cookie not present
+2022/06/28 17:00:05 route_auth.go:96: http: named cookie not present
+2022/06/28 17:01:14 route_auth.go:96: http: named cookie not present
+2022/06/28 17:01:34 route_auth.go:96: http: named cookie not present
+2022/06/28 17:02:52 route_auth.go:96: http: named cookie not present
+2022/06/28 17:03:52 route_auth.go:96: http: named cookie not present
+2022/06/28 17:03:55 route_auth.go:96: http: named cookie not present
+2022/06/28 17:03:58 route_auth.go:96: http: named cookie not present
+2022/06/28 17:04:06 route_auth.go:96: http: named cookie not present
+2022/06/28 17:08:00 route_auth.go:98: http: named cookie not present
+2022/06/28 17:08:04 route_auth.go:98: http: named cookie not present
+2022/06/28 17:08:38 route_auth.go:99: http: named cookie not present
+2022/06/28 17:26:15 route_auth.go:99: http: named cookie not present
+2022/06/28 17:26:18 route_auth.go:99: http: named cookie not present
+2022/06/28 17:27:46 route_auth.go:99: http: named cookie not present
+2022/06/28 17:27:52 route_auth.go:99: http: named cookie not present
+2022/06/28 17:38:12 server.go:3159: http: panic serving [::1]:50085: template: index.html:3: unexpected EOF
+goroutine 87 [running]:
+net/http.(*conn).serve.func1(0x1400025c640)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x14000098b60})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x140000b4540}, {0x1046c4b20, 0x10472a6c0}, {0x140001359f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x140000b4540}, 0x140000ca800)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x140000b4540}, 0x140000ca800)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x140000b4540}, 0x140000ca800)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x140000b4540}, 0x140000ca800)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025c640, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:12 server.go:3159: http: panic serving [::1]:50086: template: index.html:3: unexpected EOF
+goroutine 88 [running]:
+net/http.(*conn).serve.func1(0x1400025c6e0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x1400021cbc0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x14000220620}, {0x1046c4b20, 0x10472a6c0}, {0x1400012f9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x14000220620}, 0x14000204900)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x14000220620}, 0x14000204900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x14000220620}, 0x14000204900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x14000220620}, 0x14000204900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025c6e0, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:12 server.go:3159: http: panic serving [::1]:50087: template: index.html:3: unexpected EOF
+goroutine 104 [running]:
+net/http.(*conn).serve.func1(0x140000f2500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x14000098d70})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x140000b4620}, {0x1046c4b20, 0x10472a6c0}, {0x140001359f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x140000b4620}, 0x140000ca900)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x140000b4620}, 0x140000ca900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x140000b4620}, 0x140000ca900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x140000b4620}, 0x140000ca900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000f2500, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:13 server.go:3159: http: panic serving [::1]:50088: template: index.html:3: unexpected EOF
+goroutine 94 [running]:
+net/http.(*conn).serve.func1(0x1400025c960)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x14000098f80})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x140000b4700}, {0x1046c4b20, 0x10472a6c0}, {0x140001359f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x140000b4700}, 0x140000caa00)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x140000b4700}, 0x140000caa00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x140000b4700}, 0x140000caa00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x140000b4700}, 0x140000caa00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025c960, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:13 server.go:3159: http: panic serving [::1]:50089: template: index.html:3: unexpected EOF
+goroutine 95 [running]:
+net/http.(*conn).serve.func1(0x1400025ca00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x1400011ba30})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x1400018e620}, {0x1046c4b20, 0x10472a6c0}, {0x140001cb9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x1400018e620}, 0x14000204a00)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x1400018e620}, 0x14000204a00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x1400018e620}, 0x14000204a00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x1400018e620}, 0x14000204a00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025ca00, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:13 server.go:3159: http: panic serving [::1]:50090: template: index.html:3: unexpected EOF
+goroutine 96 [running]:
+net/http.(*conn).serve.func1(0x1400025caa0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x1400021cde0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x14000220700}, {0x1046c4b20, 0x10472a6c0}, {0x1400012f9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x14000220700}, 0x14000204b00)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x14000220700}, 0x14000204b00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x14000220700}, 0x14000204b00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x14000220700}, 0x14000204b00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025caa0, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:18 server.go:3159: http: panic serving [::1]:50091: template: index.html:3: unexpected EOF
+goroutine 117 [running]:
+net/http.(*conn).serve.func1(0x1400025cb40)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x1400011bc30})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x1400018e700}, {0x1046c4b20, 0x10472a6c0}, {0x140001cb9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x1400018e700}, 0x140000cac00)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x1400018e700}, 0x140000cac00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x1400018e700}, 0x140000cac00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x1400018e700}, 0x140000cac00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025cb40, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:18 server.go:3159: http: panic serving [::1]:50092: template: index.html:3: unexpected EOF
+goroutine 118 [running]:
+net/http.(*conn).serve.func1(0x1400025cbe0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x14000099190})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x140000b47e0}, {0x1046c4b20, 0x10472a6c0}, {0x140001359f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x140000b47e0}, 0x14000204d00)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x140000b47e0}, 0x14000204d00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x140000b47e0}, 0x14000204d00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x140000b47e0}, 0x14000204d00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400025cbe0, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:18 server.go:3159: http: panic serving [::1]:50093: template: index.html:3: unexpected EOF
+goroutine 149 [running]:
+net/http.(*conn).serve.func1(0x140000f25a0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1046d3fc0, 0x140000993a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x1047345d0, 0x140000b48c0}, {0x1046c4b20, 0x10472a6c0}, {0x140001359f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:22 +0x104
+go-webapp/app/controllers.index({0x1047345d0, 0x140000b48c0}, 0x140000cae00)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x1047296a8, {0x1047345d0, 0x140000b48c0}, 0x140000cae00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x104970ec0, {0x1047345d0, 0x140000b48c0}, 0x140000cae00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x1400018e000}, {0x1047345d0, 0x140000b48c0}, 0x140000cae00)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000f25a0, {0x104735f40, 0x1400011d4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:35 server.go:3159: http: panic serving [::1]:50123: template: index.html:3: unexpected EOF
+goroutine 5 [running]:
+net/http.(*conn).serve.func1(0x14000113400)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140000ae1e0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140000b0000}, {0x1029acb20, 0x102a126c0}, {0x140001159f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140000b0000}, 0x140001a2000)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140000b0000}, 0x140001a2000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140000b0000}, 0x140001a2000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140000b0000}, 0x140001a2000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113400, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:35 server.go:3159: http: panic serving [::1]:50124: template: index.html:3: unexpected EOF
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0x140001134a0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x14000013220})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140001600e0}, {0x1029acb20, 0x102a126c0}, {0x1400011b9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140001600e0}, 0x14000128100)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140001600e0}, 0x14000128100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140001600e0}, 0x14000128100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140001600e0}, 0x14000128100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001134a0, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:35 server.go:3159: http: panic serving [::1]:50125: template: index.html:3: unexpected EOF
+goroutine 11 [running]:
+net/http.(*conn).serve.func1(0x14000113540)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x14000013430})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140001601c0}, {0x1029acb20, 0x102a126c0}, {0x1400011b9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140001601c0}, 0x14000128200)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140001601c0}, 0x14000128200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140001601c0}, 0x14000128200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140001601c0}, 0x14000128200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113540, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:35 server.go:3159: http: panic serving [::1]:50126: template: index.html:3: unexpected EOF
+goroutine 16 [running]:
+net/http.(*conn).serve.func1(0x140001135e0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140000ae3f0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140000b00e0}, {0x1029acb20, 0x102a126c0}, {0x140001159f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140000b00e0}, 0x140000f4000)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140000b00e0}, 0x140000f4000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140000b00e0}, 0x140000f4000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140000b00e0}, 0x140000f4000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001135e0, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:35 server.go:3159: http: panic serving [::1]:50127: template: index.html:3: unexpected EOF
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0x14000113680)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140001921f0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140001b8000}, {0x1029acb20, 0x102a126c0}, {0x140001179f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140001b8000}, 0x14000128400)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140001b8000}, 0x14000128400)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140001b8000}, 0x14000128400)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140001b8000}, 0x14000128400)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113680, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:35 server.go:3159: http: panic serving [::1]:50128: template: index.html:3: unexpected EOF
+goroutine 35 [running]:
+net/http.(*conn).serve.func1(0x14000113720)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x14000013650})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140001602a0}, {0x1029acb20, 0x102a126c0}, {0x1400011b9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140001602a0}, 0x14000128500)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140001602a0}, 0x14000128500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140001602a0}, 0x14000128500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140001602a0}, 0x14000128500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113720, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:36 server.go:3159: http: panic serving [::1]:50129: template: index.html:3: unexpected EOF
+goroutine 40 [running]:
+net/http.(*conn).serve.func1(0x140001137c0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140000ae600})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140000b01c0}, {0x1029acb20, 0x102a126c0}, {0x140001159f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140000b01c0}, 0x140000f4100)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140000b01c0}, 0x140000f4100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140000b01c0}, 0x140000f4100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140000b01c0}, 0x140000f4100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001137c0, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:36 server.go:3159: http: panic serving [::1]:50130: template: index.html:3: unexpected EOF
+goroutine 41 [running]:
+net/http.(*conn).serve.func1(0x14000113860)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140001923f0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140001b80e0}, {0x1029acb20, 0x102a126c0}, {0x140001179f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140001b80e0}, 0x14000128600)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140001b80e0}, 0x14000128600)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140001b80e0}, 0x14000128600)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140001b80e0}, 0x14000128600)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113860, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:36 server.go:3159: http: panic serving [::1]:50131: template: index.html:3: unexpected EOF
+goroutine 42 [running]:
+net/http.(*conn).serve.func1(0x14000113900)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x14000013870})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x14000160380}, {0x1029acb20, 0x102a126c0}, {0x1400011b9f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x14000160380}, 0x14000128700)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x14000160380}, 0x14000128700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x14000160380}, 0x14000128700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x14000160380}, 0x14000128700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113900, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:36 server.go:3159: http: panic serving [::1]:50132: template: index.html:3: unexpected EOF
+goroutine 47 [running]:
+net/http.(*conn).serve.func1(0x140001139a0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140000ae810})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140000b02a0}, {0x1029acb20, 0x102a126c0}, {0x140001159f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140000b02a0}, 0x140000f4200)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140000b02a0}, 0x140000f4200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140000b02a0}, 0x140000f4200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140000b02a0}, 0x140000f4200)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001139a0, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:36 server.go:3159: http: panic serving [::1]:50133: template: index.html:3: unexpected EOF
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0x14000113a40)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140001925f0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140001b81c0}, {0x1029acb20, 0x102a126c0}, {0x140001179f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140001b81c0}, 0x14000128800)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140001b81c0}, 0x14000128800)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140001b81c0}, 0x14000128800)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140001b81c0}, 0x14000128800)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113a40, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/28 17:38:36 server.go:3159: http: panic serving [::1]:50134: template: index.html:3: unexpected EOF
+goroutine 68 [running]:
+net/http.(*conn).serve.func1(0x140000fc000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1029bbfc0, 0x140000aea20})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x102a1c5d0, 0x140000b0380}, {0x1029acb20, 0x102a126c0}, {0x140001159f8, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.index({0x102a1c5d0, 0x140000b0380}, 0x140000f4300)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:25 +0x104
+net/http.HandlerFunc.ServeHTTP(0x102a116a8, {0x102a1c5d0, 0x140000b0380}, 0x140000f4300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x102c58ec0, {0x102a1c5d0, 0x140000b0380}, 0x140000f4300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x102a1c5d0, 0x140000b0380}, 0x140000f4300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000fc000, {0x102a1df40, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8

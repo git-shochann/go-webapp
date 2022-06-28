@@ -36,7 +36,7 @@ func (u *User) CreateUser() (err error) {
 
 	// 同一パッケージ間で変数を共有するためpackage名.変数.メソッド()としないでOK
 	// ここで実際にUserテーブルに登録する
-	_, err = Db.Exec(createUserCmd, createUUID(), u.Name, u.Email, Encrypto(u.PassWord), time.Now())
+	_, err = Db.Exec(createUserCmd, createUUID(), u.Name, u.Email, Encrypt(u.PassWord), time.Now())
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -157,4 +157,14 @@ func (sess *Session) CheckSession() (valid bool, err error) {
 		valid = true
 	}
 	return valid, err
+}
+
+// sessionを破棄する(ログアウトにする)
+func (sess *Session) DeleteSessionByUUID() (err error) {
+	deleteSessionCommand := `delete from sessions where uuid = ?`
+	_, err = Db.Exec(deleteSessionCommand, sess.UUID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
 }

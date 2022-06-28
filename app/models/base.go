@@ -79,7 +79,7 @@ func createUUID() (uuidobj uuid.UUID) {
 }
 
 // Passwordを作成する
-func Encrypto(plaintext string) (cryptext string) {
+func Encrypt(plaintext string) (cryptext string) {
 	// sha1を用いて、ハッシュ化する
 	cryptext = fmt.Sprintf("%x", sha1.Sum([]byte(plaintext)))
 	return cryptext
