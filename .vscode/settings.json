@@ -1,3 +1,6 @@
 {
-  "makefile.extensionOutputFolder": "./.vscode"
+  "makefile.extensionOutputFolder": "./.vscode",
+  "commentTranslate.hover.enabled": false,
+  "commentTranslate.source": "Google",
+  "commentTranslate.targetLanguage": "ja"
 }

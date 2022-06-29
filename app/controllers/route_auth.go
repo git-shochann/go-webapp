@@ -48,7 +48,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// ユーザーを認証するハンドラー
+// ログイン後のユーザーを認証するハンドラー
 func authenticate(w http.ResponseWriter, r *http.Request) {
 	// こうすることで後ほどrからPostリクエストの内容を取得出来る。
 	// r.Form と r.PostFormに値をセットする。
@@ -69,7 +69,7 @@ func authenticate(w http.ResponseWriter, r *http.Request) {
 		// セッションを作成する
 		session, err := user.CreateSession()
 		if err != nil {
-			log.Fatalln(err)
+			log.Println(err)
 		}
 
 		// クッキーを作成して、ブラウザに保存場所を決める
@@ -91,7 +91,6 @@ func authenticate(w http.ResponseWriter, r *http.Request) {
 // ログアウトのハンドラー
 func logout(w http.ResponseWriter, r *http.Request) {
 
-	// BUG: Cookieがない？ == 元々sessionが作成出来てない？
 	// クッキーをまずはリクエストから取得する
 	cookie, err := r.Cookie("_cookie")
 

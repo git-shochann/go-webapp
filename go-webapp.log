@@ -1991,3 +1991,148 @@ net/http.(*conn).serve(0x140000fc000, {0x102a1df40, 0x1400007b4a0})
 	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
 created by net/http.(*Server).Serve
 	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/29 13:37:15 route_auth.go:99: http: named cookie not present
+2022/06/29 13:37:18 route_auth.go:99: http: named cookie not present
+2022/06/29 13:37:25 route_auth.go:99: http: named cookie not present
+2022/06/29 13:37:27 route_auth.go:99: http: named cookie not present
+2022/06/29 13:37:38 route_auth.go:99: http: named cookie not present
+2022/06/29 13:37:45 route_auth.go:99: http: named cookie not present
+2022/06/29 13:37:52 users.go:107: sql: no rows in result set
+2022/06/29 13:38:37 users.go:107: sql: no rows in result set
+2022/06/29 13:39:31 users.go:107: sql: no rows in result set
+2022/06/29 13:40:50 route_auth.go:99: http: named cookie not present
+2022/06/29 14:23:09 route_auth.go:99: http: named cookie not present
+2022/06/29 14:23:53 route_auth.go:99: http: named cookie not present
+2022/06/29 14:25:43 route_auth.go:99: http: named cookie not present
+2022/06/29 16:19:52 server.go:3159: http: panic serving [::1]:49929: open app/views/templates/index.html: no such file or directory
+goroutine 5 [running]:
+net/http.(*conn).serve.func1(0x14000113400)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1031d60c0, 0x1400009a870})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x103224a10, 0x14000160380}, {0x103204620, 0x14000162900}, {0x14000207868, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.todos({0x103224a10, 0x14000160380}, 0x1400018e100)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:37 +0x244
+net/http.HandlerFunc.ServeHTTP(0x103219ad0, {0x103224a10, 0x14000160380}, 0x1400018e100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x103460ec0, {0x103224a10, 0x14000160380}, 0x1400018e100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x103224a10, 0x14000160380}, 0x1400018e100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x14000113400, {0x103226480, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/29 16:19:52 server.go:3159: http: panic serving [::1]:49930: open app/views/templates/index.html: no such file or directory
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0x140001134a0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1031d60c0, 0x1400009b170})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x103224a10, 0x140000b00e0}, {0x103204620, 0x140000b9700}, {0x1400011b868, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.todos({0x103224a10, 0x140000b00e0}, 0x14000128100)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:37 +0x244
+net/http.HandlerFunc.ServeHTTP(0x103219ad0, {0x103224a10, 0x140000b00e0}, 0x14000128100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x103460ec0, {0x103224a10, 0x140000b00e0}, 0x14000128100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x103224a10, 0x140000b00e0}, 0x14000128100)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001134a0, {0x103226480, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/29 16:19:52 server.go:3159: http: panic serving [::1]:49931: open app/views/templates/index.html: no such file or directory
+goroutine 50 [running]:
+net/http.(*conn).serve.func1(0x140001137c0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1031d60c0, 0x1400021a450})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x103224a10, 0x14000160460}, {0x103204620, 0x14000162d00}, {0x14000115868, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.todos({0x103224a10, 0x14000160460}, 0x14000128500)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:37 +0x244
+net/http.HandlerFunc.ServeHTTP(0x103219ad0, {0x103224a10, 0x14000160460}, 0x14000128500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x103460ec0, {0x103224a10, 0x14000160460}, 0x14000128500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x103224a10, 0x14000160460}, 0x14000128500)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140001137c0, {0x103226480, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/29 16:19:53 server.go:3159: http: panic serving [::1]:49932: open app/views/templates/index.html: no such file or directory
+goroutine 66 [running]:
+net/http.(*conn).serve.func1(0x1400030c000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1031d60c0, 0x1400009ba40})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x103224a10, 0x140000b01c0}, {0x103204620, 0x140000b9b00}, {0x1400011b868, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.todos({0x103224a10, 0x140000b01c0}, 0x14000128700)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:37 +0x244
+net/http.HandlerFunc.ServeHTTP(0x103219ad0, {0x103224a10, 0x140000b01c0}, 0x14000128700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x103460ec0, {0x103224a10, 0x140000b01c0}, 0x14000128700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x103224a10, 0x140000b01c0}, 0x14000128700)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400030c000, {0x103226480, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/29 16:19:53 server.go:3159: http: panic serving [::1]:49933: open app/views/templates/index.html: no such file or directory
+goroutine 67 [running]:
+net/http.(*conn).serve.func1(0x1400030c0a0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1031d60c0, 0x140002aa330})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x103224a10, 0x140000b02a0}, {0x103204620, 0x140000b9f00}, {0x1400011b868, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.todos({0x103224a10, 0x140000b02a0}, 0x14000314000)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:37 +0x244
+net/http.HandlerFunc.ServeHTTP(0x103219ad0, {0x103224a10, 0x140000b02a0}, 0x14000314000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x103460ec0, {0x103224a10, 0x140000b02a0}, 0x14000314000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x103224a10, 0x140000b02a0}, 0x14000314000)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x1400030c0a0, {0x103226480, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
+2022/06/29 16:19:53 server.go:3159: http: panic serving [::1]:49934: open app/views/templates/index.html: no such file or directory
+goroutine 31 [running]:
+net/http.(*conn).serve.func1(0x140000d41e0)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1801 +0xdc
+panic({0x1031d60c0, 0x140002aacc0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/runtime/panic.go:1052 +0x2ac
+html/template.Must(...)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/html/template/template.go:374
+go-webapp/app/controllers.generateHTML({0x103224a10, 0x140000b0380}, {0x103204620, 0x140002ac380}, {0x1400011b868, 0x3, 0x3})
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/server.go:23 +0x104
+go-webapp/app/controllers.todos({0x103224a10, 0x140000b0380}, 0x140000c8300)
+	/Users/sho/Coding/go/src/go-webapp/app/controllers/route_main.go:37 +0x244
+net/http.HandlerFunc.ServeHTTP(0x103219ad0, {0x103224a10, 0x140000b0380}, 0x140000c8300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2046 +0x40
+net/http.(*ServeMux).ServeHTTP(0x103460ec0, {0x103224a10, 0x140000b0380}, 0x140000c8300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2424 +0x18c
+net/http.serverHandler.ServeHTTP({0x14000160000}, {0x103224a10, 0x140000b0380}, 0x140000c8300)
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:2878 +0x444
+net/http.(*conn).serve(0x140000d41e0, {0x103226480, 0x1400007b4a0})
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:1929 +0xb6c
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.17.3/libexec/src/net/http/server.go:3033 +0x4b8
