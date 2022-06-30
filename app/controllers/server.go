@@ -46,25 +46,27 @@ func session(w http.ResponseWriter, r *http.Request) (session models.Session, er
 	return session, err
 }
 
-// todos/edit/1
-var validPath = regexp.MustCompile("^/todos/(edit/update)/([0-9]+$)")
+// 正規表現の設定
+var validPath = regexp.MustCompile("^/todos/(edit|save|update|delete)/([0-9]+)$")
 
 // 関数を引数に取る(func todoEdit)
 // TODO: 再度確認必要
+// 	http.HandleFunc("/todos/edit/", parseURL(todoEdit))
 func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		// todos/edit/1
-		// 一致する部分をスライスで取り出す
-		fmt.Println(r.URL.Path) //
 
+		fmt.Println(r.URL.Path) // /todos/edit/1
+
+		// [/todos/edit/1 edit 1]
+		// 一部をマッチさせたいとき
 		q := validPath.FindStringSubmatch(r.URL.Path)
-		fmt.Println(q) // []
+
 		if q == nil {
 			http.NotFound(w, r)
 			return
 		}
 		qi, err := strconv.Atoi(q[2])
-		fmt.Println(qi)
+
 		if err != nil {
 			http.NotFound(w, r)
 			return
@@ -87,7 +89,9 @@ func StartMainServer() error {
 	http.HandleFunc("/todos", todos)
 	http.HandleFunc("/todos/new", todoNew)
 	http.HandleFunc("/todos/save", todoSave)
+	// parseURL(todoEdit) -> 関数を引数に取る関数 == parseURLに渡してあげる
 	http.HandleFunc("/todos/edit/", parseURL(todoEdit))
+	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 
 }
